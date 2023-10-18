@@ -75,56 +75,35 @@
 <body>
         <div class="main">
             <nav>
-                <span class="s1" id="std">Student</span>
+                <span class="s1" id="std" onclick="mod(1)">Student</span>
                 <span class="s3" onclick="mod(2)" id="flt">Faculty</span>
                 <span class="s2" onclick="mod(3)" id="adm">Admin</span>
             </nav>
             <br>
             <div class="tform">
-                <form action="logins.php" id="1" autocomplete="off" style="display:inline-block;">
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <form action="logins.php" id="1" autocomplete="off" style="display:block;">
+                    <input type="email" name="email" id="email" placeholder="Enter your student email" required>
                     <br>
                     <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
                     <br>
                     <input class="submit" type="Submit" class="submit" value="LOGIN">
                 </form>
                 <form action="loginf.php" id="2" autocomplete="off" style="display:none;">
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter your faculty email" required>
                     <br>
-                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
                     <br>
                     <input type="Submit" class="submit" value="LOGIN">
                 </form>
                 <form action="loginm.php" id="3" autocomplete="off"style="display:none;">
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter your manager email" required>
                     <br>
-                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
                     <br>
                     <input type="Submit" class="submit" value="LOGIN">
                 </form>
             </div>
         </div>
 </body>
-<script>
-    function mod(x)
-    {
-        if(x==2)
-        {
-            alert("faculty");
-            document.getElementById("1").style.display="none";
-            document.getElementById("3").style.display="none";
-            document.getElementById("1").style.display="inline-block";
-            
-            
-
-        }
-        else if(x==3)
-        {
-            alert("admin");
-            document.getElementById("1").style.display="none";
-            document.getElementById("2").style.display="none";
-            document.getElementById("3").style.display="inline-block";
-        }
-    }
-</script>
+<script src="javascript/index.js"></script>
 </html>
