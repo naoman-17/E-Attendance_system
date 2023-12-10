@@ -36,12 +36,13 @@
     else if($total2==1)
     {
       $operation2="insert into facultyattendancedb values('$userprofile','$date','$time')";
-      $opdata2=mysqli_query($conn,$operation1);
+      $opdata2=mysqli_query($conn,$operation2);
       if($opdata2)
       {
         $alert=
           "<script>
               alert('Operation Successfull');
+              window.location.href='home.php';
           </script>";
         echo $alert;
       }
@@ -49,12 +50,13 @@
     else if($total3==1)
     {
       $operation3="insert into managerattendancedb values('$userprofile','$date','$time')";
-      $opdata3=mysqli_query($conn,$operation1);
+      $opdata3=mysqli_query($conn,$operation3);
       if($opdata3)
       {
         $alert=
           "<script>
               alert('Operation Successfull');
+              window.location.href='home.php';
           </script>";
         echo $alert;
       }
@@ -63,7 +65,7 @@
         $alert=
         "<script>
             alert('WRONG USERNAME, No such user exists');
-            window.location.href='../index.html';
+            window.location.href='home.php';
         </script>";
         echo $alert;
     }
