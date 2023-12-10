@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            background-image: url("homebg.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        nav
+        {
+            text-align: center;
+            margin-top: 20px;
+        }
+        span
+        {
+            margin: 0px 10px 0px 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 30%;
+        }
+        span:hover
+        {
+            cursor: pointer;
+            background-color: yellowgreen;
+            color: white;
+        }
+        .main
+        {
+            width: 350px;
+            height:300px;
+            border: 2px solid white;
+            margin: 0 auto;
+            margin-top: 200px;
+            padding: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20%;
+        }
+        .tform
+        {
+            text-align: center;
+        }
+        input
+        {
+            text-align: center;
+            padding: 20px 40px 20px 40px;
+            margin: 10px 0px 10px 0px;
+            border-radius: 30px;
+            border: 5px solid green;
+            font-size: 16px;
+
+        }
+        .submit
+        {
+            background-color: red;
+            color: white;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+            <nav>
+                <span class="s1" id="std" onclick="mod(1)">Student</span>
+                <span class="s3" onclick="mod(2)" id="flt">Faculty</span>
+                <span class="s2" onclick="mod(3)" id="adm">Admin</span>
+            </nav>
+            <br>
+            <div class="tform">
+                <form action="php/logins.php" id="1" autocomplete="off" style="display:block;">
+                    <input type="email" name="email" id="email" placeholder="Enter your student email" required>
+                    <br>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+                    <br>
+                    <input class="submit" type="Submit" class="submit" value="LOGIN">
+                </form>
+                <form action="php/loginf.php" id="2" autocomplete="off" style="display:none;">
+                    <input type="email" name="email" id="email" placeholder="Enter your faculty email" required>
+                    <br>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+                    <br>
+                    <input type="Submit" class="submit" value="LOGIN">
+                </form>
+                <form action="php/loginm.php" id="3" autocomplete="off"style="display:none;">
+                    <input type="email" name="email" id="email" placeholder="Enter your manager email" required>
+                    <br>
+                    <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+                    <br>
+                    <input type="Submit" class="submit" value="LOGIN">
+                </form>
+            </div>
+        </div>
+</body>
+<script src="javascript/index.js"></script>
+</html>
